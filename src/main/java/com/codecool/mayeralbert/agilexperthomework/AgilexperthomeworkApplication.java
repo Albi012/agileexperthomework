@@ -12,14 +12,14 @@ import java.util.List;
 @SpringBootApplication
 public class AgilexperthomeworkApplication {
 
-    private static Group groups;
+    private static Group group;
 
     public static void main(String[] args) {
         SpringApplication.run(AgilexperthomeworkApplication.class, args);
-        groups = Group.builder().user(new AppAdminUser("Dad",new Device())).build();
+        group = Group.builder().user(new AppAdminUser("Dad",new Device())).build();
     }
 
     public void addUser(AppUser appUser) {
-        groups.addUser(appUser);
+        group.addUser(appUser);
     }
 }
