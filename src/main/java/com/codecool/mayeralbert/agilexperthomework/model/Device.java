@@ -1,11 +1,15 @@
 package com.codecool.mayeralbert.agilexperthomework.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
 @Entity
 public class Device {
+
 
     public Device() {
         this.applications = new ArrayList<>();
@@ -25,23 +29,4 @@ public class Device {
     //Arculatváltás
     String theme;
 
-
-    public void installApplication(App app) {
-        applications.add(app);
-    }
-
-    public void addBackground(String background) {
-        backgrounds.add(background);
-        System.out.println("Background has been added!");
-    }
-
-    public void setBackground(String background) {
-        if (backgrounds.contains(background)) {
-            currentBackground = background;
-        }
-    }
-
-    public void changeTheme(String theme) {
-        this.theme = theme;
-    }
 }

@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+@Data
 @Entity
 public class App {
 
@@ -15,8 +16,6 @@ public class App {
     @GeneratedValue
     Long id;
     String name;
-    @Getter
-    @Setter
     String icon;
 
     public App(){}
@@ -24,10 +23,6 @@ public class App {
     public App(String name, String icon) {
         this.name = name;
         this.icon = icon;
-    }
-
-    public void runApp() {
-        System.out.println("Application is started running:" + this.name);
     }
 
 }
